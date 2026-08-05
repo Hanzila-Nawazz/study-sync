@@ -23,8 +23,6 @@
         margin-top: 0.5rem;
     }
 
-
-
     .logo a
     {
         text-decoration: none;
@@ -581,6 +579,11 @@
     {
         text-decoration: none;
         color: #878686;
+    }
+
+    .column-list a:hover
+    {
+        color: #4D51E8;
     }
 
     .grid-column
