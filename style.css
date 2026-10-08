@@ -287,8 +287,7 @@
     .cards-container
     {
         display: grid;
-        grid-template-columns: repeat(2,1fr);
-        grid-template-rows: repeat(3,1fr);
+        grid-template-columns: repeat(3,1fr);
         grid-gap: 1.5rem;
     }
 
@@ -307,6 +306,13 @@
         padding: 1.5rem;
 
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.256);;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover
+    {
+        transform: scale(1.05);
+        box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.30);
     }
 
     .card p
@@ -869,12 +875,7 @@
             grid-template-columns: repeat(2,1fr);
             row-gap: 2rem;
             width: 70%;
-            padding: 1rem , 1.5rem , 1rem , 1.5rem;
-        }
-
-        .cards-container
-        {
-            grid-template-columns: repeat(1, 1fr);
+            padding: 1rem 1.5rem 1rem 1.5rem;
         }
 
         .testimonies
@@ -1008,6 +1009,22 @@
         .trusted-parties-grid img
         {
             height: 1rem;
+        }
+    }
+
+    @media screen and (max-width:1024px)
+    {
+        .cards-container
+        {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media screen and (max-width:768px)
+    {
+        .cards-container
+        {
+            grid-template-columns: 1fr;
         }
     }
 
